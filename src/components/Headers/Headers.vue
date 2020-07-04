@@ -199,6 +199,7 @@ export default {
             .then(resp => {
               Cookie.remove("token");
               Cookie.remove("name");
+              localStorage.removeItem('userInfo')
               this.$router.push({
                 path: "login"
               });

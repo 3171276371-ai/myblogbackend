@@ -101,37 +101,27 @@ export const asyncRoutes = [
         }
       },
       {
-        path: 'fromgood',
-        component: () => import('@/views/user/FromGood.vue'),
-        name: 'fromgood',
+        path: 'userRole',
+        component: () => import('@/views/user/UserRole.vue'),
+        name: 'userRole',
         meta: {
-          title: "添加(编辑产品)",
+          title: "查询并添加用户角色 ",
           icon: 'el-icon-tickets',
           hidden: true,
           // roles: ['admin','jerry'],
           
         }
       },
+    
       {
-        path: 'onindex',
-        component: () => import('@/views/user/OnIndex.vue'),
-        name: 'onindex',
+        path: 'userinfo',
+        component: () => import('@/views/user/UserInfo.vue'),
+        name: 'userinfo',
         meta: {
-          title: "待上架产品",
+          title: "用户管理列表",
           icon: 'el-icon-tickets',
           hidden: false,
-          roles: ['admin','jerry']
-        }
-      },
-      {
-        path: 'offindex',
-        component: () => import('@/views/user/OffIndex.vue'),
-        name: 'offindex',
-        meta: {
-          title: "已下架产品",
-          icon: 'el-icon-tickets',
-          hidden: false,
-          roles: ['admin','jerry']
+          // roles: ['admin','jerry']
         }
       },
       {

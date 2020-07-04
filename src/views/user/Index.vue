@@ -170,7 +170,7 @@ export default {
         type: "",
         page: 1,
         pageSize: 10,
-        totalNum: 0
+        totalNum: 15
       },
       PlacardRules: {
         id: [
