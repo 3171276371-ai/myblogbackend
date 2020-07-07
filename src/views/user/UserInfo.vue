@@ -19,7 +19,7 @@
     </el-row>
     <!-- 检索结果 -->
     <el-row :gutter="20" class="goodsindex-list">
-      <el-col :span="24">
+      <el-col :span="21">
         <el-table
           :data="tableData"
           border
@@ -29,7 +29,7 @@
           tooltip-effect="dark"
           @selection-change="handleSelectionChange"
         >
-          <el-table-column type="index" label="序号" width="157"></el-table-column>
+          <el-table-column type="index" label="序号" width="146"></el-table-column>
           <el-table-column prop="account" label="用户名" width="200"></el-table-column>
           <el-table-column prop="name" label="姓名" width="200"></el-table-column>
           <el-table-column prop="sex" label="性别" width="80"></el-table-column>
@@ -37,14 +37,6 @@
           <el-table-column prop="isEnable" label="启停状态" width="80"></el-table-column>
           <el-table-column prop="avatar" label="头像地址" width="232"></el-table-column>
           <el-table-column prop="authData" label="权限" width="320"></el-table-column>
-          <el-table-column primary="primary" label="操作" width="200">
-            <el-button
-              type="primary"
-              class="Ad-Info-li"
-              size="small"
-              @click="adduserInfo"
-            >添加用户角色</el-button>
-          </el-table-column>
         </el-table>
       </el-col>
     </el-row>
@@ -113,11 +105,7 @@ export default {
     search() {
       this.getuserInfo();
     },
-    adduserInfo(){
-            this.$router.push({
-            path:   "/user/userRole", 
-          });
-    },
+     
     getuserInfo() {
       this.$axios
         .get("blogAdmin/findAll", {

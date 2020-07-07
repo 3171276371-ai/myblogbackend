@@ -115,8 +115,7 @@ export default {
         .then(resp => {   
           this.$cookie.set('token', resp.data.data.token, 1); 
           let token= this.$cookie.get('token'); 
-          this.$cookie.set('name', resp.data.data.staffName, 1);
-          localStorage.setItem('userInfo',JSON.stringify(resp.data.data));
+          this.$cookie.set('name', resp.data.data.staffName, 1); 
           this.loading = true; 
           // 登陆成功后重定向
           this.$router.push({

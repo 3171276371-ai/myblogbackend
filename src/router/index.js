@@ -100,18 +100,7 @@ export const asyncRoutes = [
           // roles: ['admin','jerry']
         }
       },
-      {
-        path: 'userRole',
-        component: () => import('@/views/user/UserRole.vue'),
-        name: 'userRole',
-        meta: {
-          title: "查询并添加用户角色 ",
-          icon: 'el-icon-tickets',
-          hidden: true,
-          // roles: ['admin','jerry'],
-          
-        }
-      },
+       
     
       {
         path: 'userinfo',
@@ -135,75 +124,20 @@ export const asyncRoutes = [
           roles: ['admin','jerry']
         }
       },
-    ]
-  },
-  {
-    path: '/control',
-    component: Layout,
-    redirect: '/control/keycode',
-    meta:{
-      title: "布局控制",
-      icon: 'el-icon-s-platform',
-      hidden: false,
-    },
-    children: [
       {
-        path: 'keycode',
-        component: () => import('@/views/control/KeyCode.vue'),
-        name: 'keycode',
+        path: 'article',
+        component: () => import('@/views/user/Article.vue'),
+        name: 'article',
         meta: {
-          title: "关键词",
-          icon: 'el-icon-message',
+          title: "文章管理",
+          icon: 'el-icon-tickets',
           hidden: false,
-          roles: ['admin','jerry']
-        }
-      },
-      {
-        path: 'placard',
-        component: () => import('@/views/control/Placard.vue'),
-        name: 'placard',
-        meta: {
-          title: "公告",
-          icon: 'el-icon-message',
-          hidden: false,
-          roles: ['admin','jerry']
-        }
-      },
-      {
-        path: 'carousel',
-        component: () => import('@/views/control/Carousel.vue'),
-        name: 'carousel',
-        meta: {
-          title: "首页轮播图",
-          icon: 'el-icon-message',
-          hidden: false,
-          roles: ['admin','jerry']
-        }
-      },
-      {
-        path: 'ad',
-        component: () => import('@/views/control/Ad.vue'),
-        name: 'ad',
-        meta: {
-          title: "广告图",
-          icon: 'el-icon-message',
-          hidden: false,
-          roles: ['admin','jerry']
-        }
-      },
-      {
-        path: 'nav',
-        component: () => import('@/views/control/Nav.vue'),
-        name: 'nav',
-        meta: {
-          title: "首页导航",
-          icon: 'el-icon-message',
-          hidden: false,
-          roles: ['admin','jerry']
+          // roles: ['admin','jerry']
         }
       },
     ]
   },
+   
   
 
   {
